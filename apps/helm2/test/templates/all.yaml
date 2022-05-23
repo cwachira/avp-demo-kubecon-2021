@@ -47,7 +47,7 @@ metadata:
   name: my-nginx-helm-two
   annotations:
     avp.kubernetes.io/kv-version: "1"
-    avp.kubernetes.io/path: "clouds/data/my-nginx"
+    avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 # type: Opaque
 stringData:
   password: {{ include "registry2.password" . }}
