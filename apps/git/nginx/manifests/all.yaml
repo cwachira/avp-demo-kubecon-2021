@@ -23,7 +23,7 @@ metadata:
   annotations:
 #     avp.kubernetes.io/kv-version: "1"
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
-type: Opaque
+# type: Opaque
 data:
   password: <password | base64encode>
 ---
