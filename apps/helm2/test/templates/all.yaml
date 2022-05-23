@@ -32,13 +32,25 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: my-nginx-helm
+  name: my-nginx-helm-one
   annotations:
     avp.kubernetes.io/kv-version: "1"
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
-# type: Opaque
-stringData:
-  password: {{ include "registry.password" . }}
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: {{ include "registry.password" . }}
+
+# ---
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: my-nginx-helm-two
+#   annotations:
+#     avp.kubernetes.io/kv-version: "1"
+#     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
+# # type: Opaque
+# stringData:
+#   password: {{ include "registry.password" . }}
 ---
 apiVersion: apps/v1
 kind: Deployment
