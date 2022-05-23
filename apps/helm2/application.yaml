@@ -18,11 +18,11 @@ spec:
       env:
         - name: helm_args
           value: >
-            --set global.registry1.password=<path:clouds/ibmcloud/test-account/keys/api#password>
+            --set global.registry2.password=<path:clouds/data/my-nginx#password>
 
 
 
-
+# --set global.registry1.password=<path:clouds/ibmcloud/test-account/keys/api#password>
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
 # metadata:
