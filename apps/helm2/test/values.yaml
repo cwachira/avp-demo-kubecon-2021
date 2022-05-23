@@ -1,3 +1,5 @@
 global:
-  registry:
+  registry1:
+    password: ""
+  registry2:
     password: ""
