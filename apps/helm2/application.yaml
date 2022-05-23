@@ -20,6 +20,7 @@ spec:
           value: >
             --set global.registry1.password=<path:clouds/ibmcloud/test-account/keys/api#password>
             --set global.registry2.password=<path:clouds/ibmcloud/test-account/keys/api#password>
+            -f values_test.yaml
 
 
 
