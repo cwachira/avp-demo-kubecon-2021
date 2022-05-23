@@ -34,7 +34,7 @@ kind: Secret
 metadata:
   name: my-nginx
   annotations:
-#     avp.kubernetes.io/kv-version: "1"
+    avp.kubernetes.io/kv-version: "1"
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 # type: Opaque
 stringData:
