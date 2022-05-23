@@ -38,7 +38,7 @@ metadata:
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 # type: Opaque
 stringData:
-  password: <password | base64encode>
+  password: <password>
 ---
 apiVersion: apps/v1
 kind: Deployment
