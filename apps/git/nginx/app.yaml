@@ -4,14 +4,14 @@ metadata:
   name: my-nginx
 spec:
   destination:
-    namespace: default
+    namespace: argotest
     server: https://kubernetes.default.svc 
   project: default
   source:
-    repoURL: 'https://github.com/jkayani/avp-demo-kubecon-2021'
+    repoURL: 'https://github.com/cwachira/avp-demo-kubecon-2021.git'
     targetRevision: HEAD
     path: apps/git/nginx/manifests
 
     # We're telling Argo CD to use our plugin to deploy the manifests
     plugin:
-      name: argocd-vault
+      name: argocd-vault-plugin
