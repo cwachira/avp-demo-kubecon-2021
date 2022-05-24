@@ -1,5 +1,5 @@
 global:
   registry1:
-    password: ""
+    password1: ""
   registry2:
-    password: ""
+    password2: ""
