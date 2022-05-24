@@ -23,7 +23,7 @@ data:
 #   annotations:
 
 #     # Our special annotation to tell AVP where the secrets are
-#     avp.kubernetes.io/path: "secret/data/my-nginx"
+#     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 # stringData:  
 #   MY_SECRET: <password>
 # ---
@@ -35,7 +35,7 @@ metadata:
   name: my-nginx-helm-one
   annotations:
     avp.kubernetes.io/kv-version: "1"
-    avp.kubernetes.io/path: "secrets/development/data/apikey"
+    avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 type: kubernetes.io/dockerconfigjson
 data:
   .dockerconfigjson: {{ include "registry1.password1" . }}
