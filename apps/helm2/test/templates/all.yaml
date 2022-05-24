@@ -28,17 +28,17 @@ data:
 #   MY_SECRET: <password>
 # ---
 
-# ---
-# apiVersion: v1
-# kind: Secret
-# metadata:
-#   name: my-nginx-helm-one
-#   annotations:
-#     avp.kubernetes.io/kv-version: "1"
-#     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
-# type: kubernetes.io/dockerconfigjson
-# data:
-#   .dockerconfigjson: {{ include "registry1.password" . }}
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: my-nginx-helm-one
+  annotations:
+    avp.kubernetes.io/kv-version: "1"
+    avp.kubernetes.io/path: "development/data/apikey"
+type: kubernetes.io/dockerconfigjson
+data:
+  .dockerconfigjson: {{ include "registry1.password" . }}
 
 ---
 apiVersion: v1
