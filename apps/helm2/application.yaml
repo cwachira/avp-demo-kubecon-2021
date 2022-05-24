@@ -18,8 +18,7 @@ spec:
       env:
         - name: helm_args
           value: >
-            --set global.registry1.password=<path:clouds/ibmcloud/test-account/keys/api#password>
-            --set global.registry2.password=<path:clouds/ibmcloud/data-account/keys/api#password>
+            --set global.registry1.password=<path:development/data/apikey#password>
             -f values_test.yaml
 
 
