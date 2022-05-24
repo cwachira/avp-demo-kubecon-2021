@@ -63,16 +63,16 @@ Create the name of the service account to use
 
 
 {{/*
-Return registry1; password
+Return registry1; password1
 */}}
-{{- define "registry1.password" -}}
-{{- .Values.global.registry1.password -}}
+{{- define "registry1.password1" -}}
+{{- .Values.global.registry1.password1 -}}
 {{- end -}}
 
 
 {{/*
-Return registry2; password
+Return registry2; password1
 */}}
-{{- define "registry2.password" -}}
-{{- .Values.global.registry2.password -}}
+{{- define "registry2.password1" -}}
+{{- .Values.global.registry2.password1 -}}
 {{- end -}}
