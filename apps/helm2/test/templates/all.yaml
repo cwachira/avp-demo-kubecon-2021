@@ -41,17 +41,17 @@ data:
   .dockerconfigjson: {{ include "registry1.password" . }}
 
 ---
-apiVersion: v1
-kind: Secret
-metadata:
-  name: my-nginx-helm-two
-  annotations:
-    avp.kubernetes.io/kv-version: "1"
-    avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
-# type: Opaque
-stringData:
-  password: {{ include "registry2.password" . }}
----
+# apiVersion: v1
+# kind: Secret
+# metadata:
+#   name: my-nginx-helm-two
+#   annotations:
+#     avp.kubernetes.io/kv-version: "1"
+#     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
+# # type: Opaque
+# stringData:
+#   password: {{ include "registry2.password" . }}
+# ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
