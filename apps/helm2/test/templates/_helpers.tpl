@@ -71,8 +71,8 @@ Return registry1; password1
 
 
 {{/*
-Return registry2; password1
+Return registry2; password2
 */}}
-{{- define "registry2.password1" -}}
-{{- .Values.global.registry2.password1 -}}
+{{- define "registry2.password2" -}}
+{{- .Values.global.registry2.password2 -}}
 {{- end -}}
