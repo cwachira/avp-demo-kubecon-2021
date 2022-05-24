@@ -18,12 +18,13 @@ spec:
       env:
         - name: helm_args
           value: >
-            --set global.registry1.password=<path:development/data/apikey#password>
+            --set global.registry1.password=<path:development/data/apikey#password1>
+            --set global.registry1.password=<path:development/data/apikey#password2>
             -f values_test.yaml
 
 
 
-# --set global.registry1.password=<path:clouds/ibmcloud/test-account/keys/api#password>
+
 # apiVersion: argoproj.io/v1alpha1
 # kind: Application
 # metadata:
