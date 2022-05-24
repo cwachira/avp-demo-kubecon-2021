@@ -35,7 +35,7 @@ metadata:
   name: my-nginx-helm-one
   annotations:
     avp.kubernetes.io/kv-version: "1"
-    avp.kubernetes.io/path: "development/data/apikey"
+    avp.kubernetes.io/path: "secrets/development/data/apikey"
 type: kubernetes.io/dockerconfigjson
 data:
   .dockerconfigjson: {{ include "registry1.password1" . }}
@@ -47,7 +47,7 @@ metadata:
   name: my-nginx-helm-two
   annotations:
     avp.kubernetes.io/kv-version: "1"
-    avp.kubernetes.io/path: "development/data/apikey"
+    avp.kubernetes.io/path: "secrets/development/data/apikey"
 # type: Opaque
 stringData:
   MY_SECRET: {{ include "registry2.password2" . }}
