@@ -55,7 +55,7 @@ stringData:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-nginx-helm
+  name: {{ .Values.deployment.name }}
 spec:
   selector:
     matchLabels:
