@@ -76,3 +76,17 @@ Return registry2; password2
 {{- define "registry2.password2" -}}
 {{- .Values.global.registry2.password2 -}}
 {{- end -}}
+
+{{/*
+Return secret1; name1
+*/}}
+{{- define "secret1.name1" -}}
+{{- .Values.global.secret1.name1 -}}
+{{- end -}}
+
+{{/*
+Return secret2; name2
+*/}}
+{{- define "secret2.name2" -}}
+{{- .Values.global.secret2.name2 -}}
+{{- end -}}
