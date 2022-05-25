@@ -25,14 +25,14 @@ data:
 #     # Our special annotation to tell AVP where the secrets are
 #     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 # stringData:  
-#   MY_SECRET: <password>
+#   MY_SECRET: <password> my-nginx-helm-one
 # ---
 
 ---
 apiVersion: v1
 kind: Secret
 metadata:
-  name: my-nginx-helm-one
+  name: {{ include "secret1.name1" . }}
   annotations:
     avp.kubernetes.io/kv-version: "1"
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
@@ -44,7 +44,7 @@ data:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: my-nginx-helm-two
+  name: {{ include "secret2.name2" . }}
   annotations:
     avp.kubernetes.io/kv-version: "1"
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
