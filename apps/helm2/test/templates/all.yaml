@@ -38,7 +38,8 @@ metadata:
     avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 type: kubernetes.io/dockerconfigjson
 data:
-  .dockerconfigjson: {{ include "registry1.password1" . }}
+  .dockerconfigjson: {{ .Values.global.registry1.password1 }}
+#     .dockerconfigjson: {{ include "registry1.password1" . }}
 
 ---
 apiVersion: v1
