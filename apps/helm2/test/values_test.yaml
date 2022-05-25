@@ -7,3 +7,5 @@ global:
     name1: ""
   secret2:
     name2: ""
+deployment:
+  name: ""
