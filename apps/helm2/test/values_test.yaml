@@ -3,3 +3,7 @@ global:
     password1: ""
   registry2:
     password2: ""
+  secret1:
+    name1: ""
+  secret2:
+    name2: ""
