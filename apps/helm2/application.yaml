@@ -20,6 +20,8 @@ spec:
           value: >
             --set global.registry1.password1=<path:clouds/ibmcloud/test-account/keys/api#password1>
             --set global.registry2.password2=<path:clouds/ibmcloud/test-account/keys/api#password2>
+            --set global.secret1.name1=my-nginx-helm-ones
+            --set global.secret2.name2=my-nginx-helm-twos
             -f values_test.yaml
 
 
