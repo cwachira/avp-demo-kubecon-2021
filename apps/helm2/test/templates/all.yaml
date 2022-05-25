@@ -60,6 +60,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.deployment.name }}
+  annotations:
+    avp.kubernetes.io/kv-version: "1"
+    avp.kubernetes.io/path: "clouds/ibmcloud/test-account/keys/api"
 spec:
   selector:
     matchLabels:
